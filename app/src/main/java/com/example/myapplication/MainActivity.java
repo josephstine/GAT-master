@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.standard_tune) {
-            startActivity( new Intent(MainActivity.this, standard.class));
+            startActivity( new Intent(MainActivity.this, bt_device.class));
             return false;
         } else if (id == R.id.drop_c) {
 
