@@ -10,7 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 import android.app.ProgressDialog;
 import android.bluetooth.BluetoothAdapter;
@@ -25,6 +27,9 @@ public class standard extends AppCompatActivity {
     Button On, Off, Discnt, Abt;
     String address = null;
     private ProgressDialog progress;
+    private RadioGroup radioGroup;
+    private RadioButton radioSelected;
+    private ImageButton sendData;
     BluetoothAdapter myBluetooth = null;
     BluetoothSocket btSocket = null;
     private boolean isBtConnected = false;
@@ -40,6 +45,8 @@ public class standard extends AppCompatActivity {
         Intent newint = getIntent();
         address = newint.getStringExtra(bt_device.EXTRA_ADDRESS); //receive the address of the bluetooth device
 
+        addListenerOnButton();
+
         String1 = (RadioButton)findViewById(R.id.string1);
         String2 = (RadioButton)findViewById(R.id.string2);
         String3 = (RadioButton)findViewById(R.id.string3);
@@ -47,13 +54,14 @@ public class standard extends AppCompatActivity {
         String5 = (RadioButton)findViewById(R.id.string5);
         String6 = (RadioButton)findViewById(R.id.string6);
 
-        On = (Button)findViewById(R.id.button);
-        Off = (Button)findViewById(R.id.button2);
+        //On = (Button)findViewById(R.id.button);
+        //Off = (Button)findViewById(R.id.button2);
         Discnt =(Button)findViewById(R.id.button3);
 
         new ConnectBT().execute(); //Call the class to connect
 
         //commands to be sent to bluetooth
+        /*
         String1.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -107,7 +115,7 @@ public class standard extends AppCompatActivity {
                 sendSix(); //method to send six
             }
         });
-
+    */
         On.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -134,6 +142,34 @@ public class standard extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void addListenerOnButton()
+    {
+        radioGroup = (RadioGroup) findViewById(R.id.selectedString);
+        sendData = (ImageButton) findViewById(R.id.imageButton);
+
+        sendData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int selectId = radioGroup.getCheckedRadioButtonId();
+                radioSelected = (RadioButton) findViewById(selectId);
+
+                if(selectId == 1){
+                    sendOne();
+                } else if(selectId == 2) {
+                    sendTwo();
+                } else if(selectId == 3) {
+                    sendThree();
+                } else if(selectId == 4) {
+                    sendFour();
+                } else if(selectId == 5) {
+                    sendFive();
+                } else if(selectId == 6) {
+                    sendSix();
+                }
+            }
+        });
     }
 
     private void sendOne()

@@ -28,6 +28,7 @@
         android:paddingTop="20dp">
 
         <RadioGroup
+        android:id="@+id/selectedString"
         android:layout_width="410dp"
         android:layout_height="700dp">
 
@@ -42,7 +43,7 @@
                 android:layout_marginLeft="61dp"
                 android:layout_marginTop="146dp"
                 android:paddingTop="20dp"
-                android:text="String 1"
+                android:text="String E"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -57,7 +58,7 @@
                 android:layout_marginLeft="61dp"
                 android:layout_marginTop="15dp"
                 android:paddingTop="25dp"
-                android:text="String 2"
+                android:text="String A"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -72,7 +73,7 @@
                 android:layout_marginLeft="61dp"
                 android:layout_marginTop="15dp"
                 android:paddingTop="25dp"
-                android:text="String 3"
+                android:text="String D"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -87,7 +88,7 @@
                 android:layout_marginLeft="61dp"
                 android:layout_marginTop="15dp"
                 android:paddingTop="25dp"
-                android:text="String 4"
+                android:text="String G"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -102,7 +103,7 @@
                 android:layout_marginLeft="61dp"
                 android:layout_marginTop="15dp"
                 android:paddingTop="25dp"
-                android:text="String 5"
+                android:text="String B"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -117,7 +118,7 @@
                 android:layout_marginLeft="61dp"
                 android:layout_marginTop="15dp"
                 android:paddingTop="25dp"
-                android:text="String 6"
+                android:text="String E"
                 android:textSize="18sp"
                 android:textStyle="bold" />
         </RadioGroup>
