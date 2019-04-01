@@ -18,6 +18,7 @@ import android.app.ProgressDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import java.io.IOException;
 import java.util.UUID;
@@ -46,14 +47,14 @@ public class standard extends AppCompatActivity {
         address = newint.getStringExtra(bt_device.EXTRA_ADDRESS); //receive the address of the bluetooth device
 
         addListenerOnButton();
-
+/*
         String1 = (RadioButton)findViewById(R.id.string1);
         String2 = (RadioButton)findViewById(R.id.string2);
         String3 = (RadioButton)findViewById(R.id.string3);
         String4 = (RadioButton)findViewById(R.id.string4);
         String5 = (RadioButton)findViewById(R.id.string5);
         String6 = (RadioButton)findViewById(R.id.string6);
-
+*/
         //On = (Button)findViewById(R.id.button);
         //Off = (Button)findViewById(R.id.button2);
         Discnt =(Button)findViewById(R.id.button3);
@@ -61,7 +62,7 @@ public class standard extends AppCompatActivity {
         new ConnectBT().execute(); //Call the class to connect
 
         //commands to be sent to bluetooth
-        /*
+/*
         String1.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -115,7 +116,7 @@ public class standard extends AppCompatActivity {
                 sendSix(); //method to send six
             }
         });
-    */
+    /*
         On.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -124,7 +125,7 @@ public class standard extends AppCompatActivity {
                 turnOnLed();      //method to turn on
             }
         });
-
+    /*
         Off.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -132,7 +133,7 @@ public class standard extends AppCompatActivity {
                 turnOffLed();   //method to turn off
             }
         });
-
+    */
         Discnt.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -154,22 +155,22 @@ public class standard extends AppCompatActivity {
             public void onClick(View v) {
                 int selectId = radioGroup.getCheckedRadioButtonId();
                 radioSelected = (RadioButton) findViewById(selectId);
-
-                if(selectId == 1){
+                if(selectId == 2131230916){
                     sendOne();
-                } else if(selectId == 2) {
+                } else if(selectId == 2131230917) {
                     sendTwo();
-                } else if(selectId == 3) {
+                } else if(selectId == 2131230918) {
                     sendThree();
-                } else if(selectId == 4) {
+                } else if(selectId == 2131230919) {
                     sendFour();
-                } else if(selectId == 5) {
+                } else if(selectId == 2131230920) {
                     sendFive();
-                } else if(selectId == 6) {
+                } else if(selectId == 2131230921) {
                     sendSix();
                 }
             }
         });
+
     }
 
     private void sendOne()
@@ -276,7 +277,7 @@ public class standard extends AppCompatActivity {
         finish(); //return to the first layout
 
     }
-
+    /*
     private void turnOffLed()
     {
         if (btSocket!=null)
@@ -306,7 +307,7 @@ public class standard extends AppCompatActivity {
             }
         }
     }
-
+    */
     // fast way to call Toast
     private void msg(String s)
     {
