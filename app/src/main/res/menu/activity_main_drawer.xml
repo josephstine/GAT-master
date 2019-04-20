@@ -21,10 +21,6 @@
             android:id="@+id/drop_b"
             android:icon="@drawable/guitaricon"
             android:title="Drop B" />
-        <item
-            android:id="@+id/reset_tuning"
-            android:icon="@drawable/guitaricon"
-            android:title="Reset Tuning" />
     </group>
 
     <item android:title="Communicate">

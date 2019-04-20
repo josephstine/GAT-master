@@ -1,29 +1,26 @@
 package com.example.myapplication;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
-
+import android.app.ProgressDialog;
+import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
-import android.view.View;
-import android.widget.Button;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
-import android.app.ProgressDialog;
-import android.bluetooth.BluetoothAdapter;
-import android.bluetooth.BluetoothDevice;
-import android.os.AsyncTask;
-import android.util.Log;
 
 import java.io.IOException;
 import java.util.UUID;
 
-public class standard extends AppCompatActivity {
+public class drop_c extends AppCompatActivity {
     RadioButton String1, String2, String3, String4, String5, String6;
     Button On, Off, Discnt, Abt;
     String address = null;
@@ -75,17 +72,17 @@ public class standard extends AppCompatActivity {
             public void onClick(View v) {
                 int selectId = radioGroup.getCheckedRadioButtonId();
                 radioSelected = (RadioButton) findViewById(selectId);
-                if(selectId == 2131230914){
+                if(selectId == 2131230915){
                     sendOne();
-                } else if(selectId == 2131230915) {
-                    sendTwo();
                 } else if(selectId == 2131230916) {
-                    sendThree();
+                    sendTwo();
                 } else if(selectId == 2131230917) {
-                    sendFour();
+                    sendThree();
                 } else if(selectId == 2131230918) {
-                    sendFive();
+                    sendFour();
                 } else if(selectId == 2131230919) {
+                    sendFive();
+                } else if(selectId == 2131230920) {
                     sendSix();
                 }
             }
@@ -99,7 +96,7 @@ public class standard extends AppCompatActivity {
         {
             try
             {
-                btSocket.getOutputStream().write("E1".toString().getBytes());
+                btSocket.getOutputStream().write("C1".toString().getBytes());
             }
             catch (IOException e)
             {
@@ -114,7 +111,7 @@ public class standard extends AppCompatActivity {
         {
             try
             {
-                btSocket.getOutputStream().write("E2".toString().getBytes());
+                btSocket.getOutputStream().write("C2".toString().getBytes());
             }
             catch (IOException e)
             {
@@ -129,7 +126,7 @@ public class standard extends AppCompatActivity {
         {
             try
             {
-                btSocket.getOutputStream().write("E3".toString().getBytes());
+                btSocket.getOutputStream().write("C3".toString().getBytes());
             }
             catch (IOException e)
             {
@@ -144,7 +141,7 @@ public class standard extends AppCompatActivity {
         {
             try
             {
-                btSocket.getOutputStream().write("E4".toString().getBytes());
+                btSocket.getOutputStream().write("C4".toString().getBytes());
             }
             catch (IOException e)
             {
@@ -159,7 +156,7 @@ public class standard extends AppCompatActivity {
         {
             try
             {
-                btSocket.getOutputStream().write("E5".toString().getBytes());
+                btSocket.getOutputStream().write("C5".toString().getBytes());
             }
             catch (IOException e)
             {
@@ -174,7 +171,7 @@ public class standard extends AppCompatActivity {
         {
             try
             {
-                btSocket.getOutputStream().write("E6".toString().getBytes());
+                btSocket.getOutputStream().write("C6".toString().getBytes());
             }
             catch (IOException e)
             {
@@ -267,7 +264,7 @@ public class standard extends AppCompatActivity {
         @Override
         protected void onPreExecute()
         {
-            progress = ProgressDialog.show(standard.this, "Connecting...", "Please wait!!!");  //show a progress dialog
+            progress = ProgressDialog.show(drop_c.this, "Connecting...", "Please wait!!!");  //show a progress dialog
         }
 
         @Override

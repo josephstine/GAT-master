@@ -9,7 +9,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".standard"></activity>
+        <activity android:name=".drop_b"></activity>
+        <activity android:name=".drop_c"></activity>
+        <activity android:name=".dropped_d"></activity>
         <activity android:name=".bt_device"></activity>
+        <activity android:name=".bt_device_drop_c"></activity>
+        <activity android:name=".bt_device_drop_b"></activity>
+        <activity android:name=".bt_device_dropped_d"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

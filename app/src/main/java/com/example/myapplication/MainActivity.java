@@ -83,13 +83,14 @@ public class MainActivity extends AppCompatActivity
             startActivity( new Intent(MainActivity.this, bt_device.class));
             return false;
         } else if (id == R.id.drop_c) {
-
+            startActivity( new Intent(MainActivity.this, bt_device_drop_c.class));
+            return false;
         } else if (id == R.id.dropped_d) {
-
+            startActivity( new Intent(MainActivity.this, bt_device_dropped_d.class));
+            return false;
         } else if (id == R.id.drop_b) {
-
-        } else if (id == R.id.reset_tuning) {
-
+            startActivity( new Intent(MainActivity.this, bt_device_drop_b.class));
+            return false;
         } else if (id == R.id.help) {
 
         } else if (id == R.id.contact_us) {

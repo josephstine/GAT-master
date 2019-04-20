@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:background="#ffc4ddd8"
     android:orientation="vertical"
-    tools:context="com.example.myapplication.bt_device">
+    tools:context="com.example.myapplication.bt_device"
+    >
 
     <Button
         android:id="@+id/button"
